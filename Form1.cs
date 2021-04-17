@@ -19,32 +19,43 @@ namespace APPHACKRental
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var street = textBox1.Text;
-            var city = textBox2.Text;
-            var state = textBox3.Text;
-            var zip = textBox4.Text;
+            var queryaddress = generateWebQuery();
+            googleMap.Navigate(queryaddress.ToString());
+        }
 
-            var queryaddress = new StringBuilder();
-            queryaddress.Append("http://google.com/maps?q=");
+        private StringBuilder generateWebQuery()
+        {
+            var queryaddress = new StringBuilder("http://google.com/maps?q=");
 
-            if( street != string.Empty)
+            if (!string.IsNullOrEmpty(city_textbox.Text))
             {
-                queryaddress.Append(street + "," + "+");
-            }
-            if (city != string.Empty)
+                queryaddress.Append(street_textbox.Text + "," + "+");
+            } else
             {
-                queryaddress.Append(city + "," + "+");
-            }
-            if (state != string.Empty)
-            {
-                queryaddress.Append(state + "," + "+");
-            }
-            if (zip != string.Empty)
-            {
-                queryaddress.Append(zip + "," + "+");
+                queryaddress.Append(street_textbox.Text);
             }
 
-            webViewCompatible1.Navigate(queryaddress.ToString());
+            if (!string.IsNullOrEmpty(state_textbox.Text))
+            {
+                queryaddress.Append(city_textbox.Text + "," + "+");
+            }
+            else
+            {
+                queryaddress.Append(city_textbox.Text);
+            }
+
+            if (!string.IsNullOrEmpty(zip_textbox.Text))
+            {
+                queryaddress.Append(state_textbox.Text + "," + "+");
+            }
+            else
+            {
+                queryaddress.Append(state_textbox.Text);
+            }
+
+            queryaddress.Append(zip_textbox.Text);
+
+            return queryaddress;
 
         }
     }

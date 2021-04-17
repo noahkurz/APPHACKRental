@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.webViewCompatible1 = new Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible();
+            this.zip_textbox = new System.Windows.Forms.TextBox();
+            this.state_textbox = new System.Windows.Forms.TextBox();
+            this.city_textbox = new System.Windows.Forms.TextBox();
+            this.street_textbox = new System.Windows.Forms.TextBox();
+            this.googleMap = new Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -50,64 +50,63 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox4);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.zip_textbox);
+            this.splitContainer1.Panel1.Controls.Add(this.state_textbox);
+            this.splitContainer1.Panel1.Controls.Add(this.city_textbox);
+            this.splitContainer1.Panel1.Controls.Add(this.street_textbox);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.webViewCompatible1);
+            this.splitContainer1.Panel2.Controls.Add(this.googleMap);
             this.splitContainer1.Size = new System.Drawing.Size(954, 643);
             this.splitContainer1.SplitterDistance = 318;
             this.splitContainer1.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(34, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(34, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(34, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 20);
-            this.textBox4.TabIndex = 3;
-            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(57, 225);
+            this.btnSearch.Location = new System.Drawing.Point(131, 582);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(145, 49);
             this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "button1";
+            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // webViewCompatible1
+            // zip_textbox
             // 
-            this.webViewCompatible1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webViewCompatible1.Location = new System.Drawing.Point(0, 0);
-            this.webViewCompatible1.Name = "webViewCompatible1";
-            this.webViewCompatible1.Size = new System.Drawing.Size(632, 643);
-            this.webViewCompatible1.TabIndex = 0;
-            this.webViewCompatible1.Text = "webViewCompatible1";
+            this.zip_textbox.Location = new System.Drawing.Point(34, 174);
+            this.zip_textbox.Name = "zip_textbox";
+            this.zip_textbox.Size = new System.Drawing.Size(168, 20);
+            this.zip_textbox.TabIndex = 3;
+            // 
+            // state_textbox
+            // 
+            this.state_textbox.Location = new System.Drawing.Point(34, 125);
+            this.state_textbox.Name = "state_textbox";
+            this.state_textbox.Size = new System.Drawing.Size(168, 20);
+            this.state_textbox.TabIndex = 2;
+            // 
+            // city_textbox
+            // 
+            this.city_textbox.Location = new System.Drawing.Point(34, 70);
+            this.city_textbox.Name = "city_textbox";
+            this.city_textbox.Size = new System.Drawing.Size(168, 20);
+            this.city_textbox.TabIndex = 1;
+            // 
+            // street_textbox
+            // 
+            this.street_textbox.Location = new System.Drawing.Point(34, 23);
+            this.street_textbox.Name = "street_textbox";
+            this.street_textbox.Size = new System.Drawing.Size(168, 20);
+            this.street_textbox.TabIndex = 0;
+            // 
+            // googleMap
+            // 
+            this.googleMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.googleMap.Location = new System.Drawing.Point(0, 0);
+            this.googleMap.Name = "googleMap";
+            this.googleMap.Size = new System.Drawing.Size(632, 643);
+            this.googleMap.TabIndex = 0;
             // 
             // Form1
             // 
@@ -131,11 +130,11 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible webViewCompatible1;
+        private System.Windows.Forms.TextBox zip_textbox;
+        private System.Windows.Forms.TextBox state_textbox;
+        private System.Windows.Forms.TextBox city_textbox;
+        private System.Windows.Forms.TextBox street_textbox;
+        private Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible googleMap;
     }
 }
 
